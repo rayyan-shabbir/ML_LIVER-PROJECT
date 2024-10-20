@@ -1,0 +1,4 @@
+I am working on a machine learning project : Predective Model on the efficacy of Medications on different liver related labs result. I have already preprocess and make ready my whole data.
+
+Now the thing I wanted from you is that help me by giving me oop class code of s Random forest ML model which take csv finale and make predictio. Try to use oop concept i it. 
+Also you have to do one more thing and that is further I want to use that model in my flask app. So that in my flask app I will make a form and when user selects any patient ID from the form and make post request with that ID, i will simply fetch related data from that csv according to that ID annd load the model and make prediction and show result to frontend by usig model instance which created firslty, help me with each ad everythig for this python task.
