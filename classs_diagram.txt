@@ -1,0 +1,87 @@
+Class: FlaskApp
+-----------------------------------
+- model : Model
+- user_db : UserDB
+-----------------------------------
++ index()
++ login()
++ signup()
++ home()
++ lab_predictor()
+
+Class: UserDB
+-----------------------------------
+- db_manager : DBManager
+-----------------------------------
++ authenticate_user(username, password)
+
+Class: DBManager
+-----------------------------------
+- db_connection
+-----------------------------------
++ connect_to_db()
++ load_db()
++ run_query(query)
+
+Class: Model
+-----------------------------------
+- trained_model
+- csv_data
+-----------------------------------
++ load_csv()
++ train_model()
++ save_model()
++ load_model()
++ predict(patient_data)
+
+Class: PreprocessLabs
+-----------------------------------
+- db_manager : DBManager
+-----------------------------------
++ run_aggregate_query()
++ save_to_json()
+
+Class: LabBase (Abstract)
+-----------------------------------
+- patient_id
+- practice
+- lab_result
+-----------------------------------
++ get_lab_info()
++ display_info()
++ predict_lab_result()
+
+Class: ALT_Lab (inherits LabBase)
+-----------------------------------
+- specific_ALT_data
+-----------------------------------
++ get_lab_info()
++ display_info()
+
+Class: AST_Lab (inherits LabBase)
+-----------------------------------
+- specific_AST_data
+-----------------------------------
++ get_lab_info()
++ display_info()
+
+Class: GGT_Lab (inherits LabBase)
+-----------------------------------
+- specific_GGT_data
+-----------------------------------
++ get_lab_info()
++ display_info()
+
+Class: HCV_Lab (inherits LabBase)
+-----------------------------------
+- specific_HCV_data
+-----------------------------------
++ get_lab_info()
++ display_info()
+
+Class: Bilirubin_Lab (inherits LabBase)
+-----------------------------------
+- specific_Bilirubin_data
+-----------------------------------
++ get_lab_info()
++ display_info()
